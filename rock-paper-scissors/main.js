@@ -1,7 +1,6 @@
 let humanScore = 0,
   computerScore = 0;
 
-console.log("Hello World");
 playGame();
 
 function playGame() {
@@ -25,43 +24,26 @@ function playGame() {
 }
 
 function playRound() {
+  const winners = {
+    Rock: "Scissors",
+    Paper: "Rock",
+    Scissors: "Paper",
+  };
   while (true) {
-    let humanChoice = getHumanChoice();
-    let computerChoice = getComputerChoice();
+    const humanChoice = getHumanChoice();
+    const computerChoice = getComputerChoice();
 
-    if (humanChoice == "Rock") {
-      if (computerChoice == "Paper") {
-        alert("You Lose! Paper beats Rock!");
-        computerScore++;
-      } else if (computerChoice == "Scissors") {
-        alert("You Win! Rock beats Scissors!");
-        humanScore++;
-      } else {
-        alert("It's a tie!");
-        continue;
-      }
-    } else if (humanChoice == "Paper") {
-      if (computerChoice == "Rock") {
-        alert("You Win! Paper beats Rock!");
-        humanScore++;
-      } else if (computerChoice == "Scissors") {
-        alert("You Lose! Scissors beats Paper!");
-        computerScore++;
-      } else {
-        alert("It's a tie!");
-        continue;
-      }
+    if (humanChoice === computerChoice) {
+      alert("It's a tie!");
+      continue;
+    }
+
+    if (winners[humanChoice] === computerChoice) {
+      alert(`You Win! ${humanChoice} beats ${computerChoice}`);
+      humanScore++;
     } else {
-      if (computerChoice == "Rock") {
-        alert("You Lose! Rock beats Scissors!");
-        computerScore++;
-      } else if (computerChoice == "Paper") {
-        alert("You Win! Scissors beats Paper!");
-        humanScore++;
-      } else {
-        alert("It's a tie!");
-        continue;
-      }
+      alert(`You Lose! ${computerChoice} beats ${humanChoice}`);
+      computerScore++;
     }
 
     break;
@@ -69,14 +51,8 @@ function playRound() {
 }
 
 function getComputerChoice() {
-  let choice = Math.floor(Math.random() * 3);
-  if (choice == 0) {
-    return "Rock";
-  } else if (choice == 1) {
-    return "Scissors";
-  } else {
-    return "Paper";
-  }
+  const choices = ["Rock", "Paper", "Scissors"];
+  return choices[Math.floor(Math.random() * 3)];
 }
 
 function getHumanChoice() {
@@ -85,13 +61,11 @@ function getHumanChoice() {
 
     if (choice == null) continue;
 
+    //Turn the User's Input into a capitalized word
     choice = choice[0].toUpperCase() + choice.slice(1).toLowerCase();
-    if (choice == "Rock") {
-      return "Rock";
-    } else if (choice == "Paper") {
-      return "Paper";
-    } else if (choice == "Scissors") {
-      return "Scissors";
+
+    if (["Rock", "Scissors", "Paper"].includes(choice)) {
+      return choice;
     }
   }
 }
