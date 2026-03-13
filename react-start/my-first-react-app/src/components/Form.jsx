@@ -22,6 +22,19 @@ function Form({ person, setPerson }) {
     }));
   }
 
+  function removeProject(id) {
+    setPerson((prev) => {
+      const updatedProjects = prev.projects.filter(
+        (project) => project.id !== id,
+      );
+
+      return {
+        ...prev,
+        projects: updatedProjects,
+      };
+    });
+  }
+
   function handleProjectChange(e, index) {
     const field = e.target.name;
     const value = e.target.value;
@@ -110,19 +123,30 @@ function Form({ person, setPerson }) {
       </div>
 
       <div className="project-form">
+        <h3>Add A Project</h3>
         {person.projects.map((project, index) => (
-          <div key={project.id}>
-            <input
-              name="projectName"
-              value={project.projectName || ""}
-              onChange={(e) => handleProjectChange(e, index)}
-            />
+          <div className="project-element" key={project.id}>
+            <label className="project-input">
+              Project Name :
+              <input
+                name="projectName"
+                value={project.projectName || ""}
+                onChange={(e) => handleProjectChange(e, index)}
+              />
+            </label>
 
-            <input
-              name="visitLink"
-              value={project.visitLink || ""}
-              onChange={(e) => handleProjectChange(e, index)}
-            />
+            <label className="project-input">
+              Visit Link :
+              <input
+                name="visitLink"
+                value={project.visitLink || ""}
+                onChange={(e) => handleProjectChange(e, index)}
+              />
+            </label>
+
+            <button onClick={() => removeProject(project.id)}>
+              Remove Project
+            </button>
           </div>
         ))}
       </div>

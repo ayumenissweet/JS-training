@@ -12,4 +12,17 @@ input {
 
 .form-info {
   border: 1px solid black;
+  border-radius: 10px;
+}
+
+.project-element {
+  padding: 10px 20px;
+  display: flex;
+  gap: 26px;
+}
+
+.project-input {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }

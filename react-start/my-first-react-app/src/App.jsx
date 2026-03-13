@@ -24,7 +24,7 @@ function App() {
   return (
     <div className="app">
       <Form person={info} setPerson={setInfo}></Form>
-      <div class="cv">
+      <div className="cv">
         <General person={info}></General>
         <Education person={info}></Education>
         <Projects person={info}></Projects>
