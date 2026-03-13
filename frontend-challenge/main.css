@@ -1,0 +1,199 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  background-color: white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.score-content {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+  padding: 32px 24px 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.result-title {
+  color: hsla(241, 100%, 89%);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.score-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.score {
+  color: white;
+  font-size: 64px;
+  font-weight: 800;
+}
+
+.score-limit {
+  color: hsla(241, 100%, 89%, 0.6);
+  font-size: 18px;
+}
+
+.result-mark {
+  color: white;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.result-paragraph {
+  color: hsla(241, 100%, 89%, 0.9);
+  font-size: 18px;
+  max-width: 260px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+#summary {
+  padding: 20px 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.summary-title {
+  color: hsl(224, 30%, 27%);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.score-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.card p {
+  color: hsl(224, 30%, 27%);
+  font-weight: 700;
+}
+
+.card span {
+  color: hsla(224, 30%, 27%, 0.4);
+  font-weight: 700;
+}
+
+.reaction {
+  background-color: hsla(0, 100%, 67%, 0.05);
+}
+
+.reaction .card-info p {
+  color: hsl(0, 100%, 67%);
+}
+
+.memory {
+  background-color: hsla(39, 100%, 56%, 0.05);
+}
+
+.memory .card-info p {
+  color: hsl(39, 100%, 56%);
+}
+
+.verbal {
+  background-color: hsla(166, 100%, 37%, 0.05);
+}
+
+.verbal .card-info p {
+  color: hsl(166, 100%, 37%);
+}
+
+.visual {
+  background-color: hsla(234, 85%, 45%, 0.05);
+}
+
+.visual .card-info p {
+  color: hsl(234, 85%, 45%);
+}
+
+.continue {
+  border: 0;
+  width: 90%;
+  max-width: 600px;
+
+  display: block;
+  margin: 10px auto;
+
+  padding: 16px 0px;
+  border-radius: 100px;
+  background-color: hsl(224, 30%, 27%);
+
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+}
+
+.continue:hover {
+  background-color: hsl(234, 85%, 45%);
+  cursor: pointer;
+}
+.continue:active {
+  transform: scale(0.98);
+}
+@media (min-width: 1024px) {
+  #content {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    max-width: 736px;
+    margin: 40px auto;
+
+    box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.05);
+    border-radius: 32px;
+    overflow: hidden;
+  }
+
+  #result,
+  .right {
+    flex: 1;
+  }
+
+  .score-content {
+    height: 100%;
+    border-radius: 32px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 40px 54px;
+  }
+
+  #summary {
+    padding: 40px;
+  }
+}

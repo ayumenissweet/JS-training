@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+.general-info {
+  padding: 10px 20px;
+  background-color: darkblue;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.personal-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}

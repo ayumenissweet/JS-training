@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>FrontEnd Mentor</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="main.js" defer></script>
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="assets/images/favicon-32x32.png"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta
+      name="description"
+      content="This is a website representing a summary of a test conducted by AI"
+    />
+    <meta name="author" content="Guerniche Aymen Abderrahim" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section id="content">
+      <section id="result">
+        <div class="score-content">
+          <h1 class="result-title">Your Result</h1>
+          <div class="score-circle">
+            <span class="score">76</span>
+            <span class="score-limit">of 100</span>
+          </div>
+          <h2 class="result-mark">Great</h2>
+          <p class="result-paragraph">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+      </section>
+      <div class="right">
+        <section id="summary">
+          <h2 class="summary-title">Summary</h2>
+          <ul class="score-cards">
+            <li class="reaction card">
+              <div class="card-info">
+                <img src="assets/images/icon-reaction.svg" alt="a light bolt" />
+                <p>Reaction</p>
+              </div>
+              <p>80 <span>/ 100</span></p>
+            </li>
+            <li class="memory card">
+              <div class="card-info">
+                <img src="assets/images/icon-memory.svg" alt="a brain" />
+                <p>Memory</p>
+              </div>
+              <p>92 <span>/ 100</span></p>
+            </li>
+            <li class="verbal card">
+              <div class="card-info">
+                <img
+                  src="assets/images/icon-verbal.svg"
+                  alt="a message bubble"
+                />
+                <p>Verbal</p>
+              </div>
+              <p>61 <span>/ 100</span></p>
+            </li>
+            <li class="visual card">
+              <div class="card-info">
+                <img src="assets/images/icon-visual.svg" alt="an open eye" />
+                <p>Visual</p>
+              </div>
+              <p>73 <span>/ 100</span></p>
+            </li>
+          </ul>
+        </section>
+        <div class="choices">
+          <button
+            type="button"
+            aria-label="continue to the next page"
+            class="continue"
+          >
+            Paper
+          </button>
+
+          <button
+            type="button"
+            aria-label="continue to the next page"
+            class="continue"
+          >
+            Scissors
+          </button>
+          <button
+            type="button"
+            aria-label="continue to the next page"
+            class="continue"
+          >
+            Rock
+          </button>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
